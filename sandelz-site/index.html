@@ -7,77 +7,132 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(180deg,#cfe6fd,#a6c6f9);
-      color: #000;
+      font-family: "Tahoma", Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      color: #f8f8f8;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)),
+        url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjYzZ3U0bWNtbmNsaTlqcnA5dnR6MjR2bGZib210bHR0Z2xycjZsaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TK4aDaZrcPvFKnn7cE/giphy.gif') center/cover fixed;
+      background-blend-mode: overlay;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.65);
+    }
+    .page-wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 36px 22px 60px;
     }
     .window {
-      max-width: 900px;
-      margin: 40px auto 60px;
-      background: #dde9fb;
-      border: 2px solid #7f9fd3;
-      box-shadow: 6px 6px 0 rgba(0,0,0,.18);
-      padding: 18px;
+      background: rgba(10, 10, 20, 0.82);
+      border: 3px solid #ff44ff;
+      border-radius: 14px;
+      box-shadow: 0 0 0 4px rgba(255, 68, 255, 0.12), 0 20px 60px rgba(0, 0, 0, 0.45);
+      padding: 26px;
+      backdrop-filter: blur(6px);
     }
     header {
-      background: linear-gradient(90deg,#0d4f9b,#5fa4ff);
-      color: white;
+      background: linear-gradient(90deg, #5a0101, #ff0000);
+      color: #ffffff;
+      padding: 18px 20px;
+      border: 3px double #ffffff;
+      border-radius: 12px;
+      margin: -26px -26px 22px;
+      font-size: 2.4rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      box-shadow: inset 0 -6px 20px rgba(0, 0, 0, 0.25);
+    }
+    .status-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+    .status-card {
+      flex: 1 1 220px;
+      min-width: 180px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
       padding: 14px 16px;
-      border: 2px solid #7f9fd3;
-      margin: -18px -18px 18px;
-      font-size: 2rem;
-      letter-spacing: 0.02em;
+      border-radius: 10px;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.18);
     }
     h2 {
-      color: #10387d;
-      margin-top: 24px;
+      color: #c00000;
+      margin-top: 26px;
+      text-shadow: 0 0 14px rgba(255, 255, 255, 0.12);
+    }
+    p,
+    li {
+      line-height: 1.7;
+      color: #f2f2f2;
     }
     a {
-      color: #0033cc;
+      color: #7ee0ff;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
     }
     ul {
-      margin-left: 22px;
+      margin-left: 24px;
     }
     hr {
       border: 0;
-      border-top: 1px solid #7f9fd3;
-      margin: 20px 0;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.12);
+      margin: 22px 0;
     }
     .button-link {
       display: inline-block;
-      background: #e6efff;
-      border: 2px outset #cfd8ff;
-      color: #003199;
-      padding: 8px 12px;
-      margin-top: 12px;
+      background: #11001a;
+      color: #fff
+      border: 2px outset #fa1414;
+      padding: 10px 16px;
+      margin-top: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
     }
     footer {
-      margin-top: 26px;
-      color: #333;
+      margin-top: 28px;
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+    .small {
+      color: #b8e8ff;
+      font-size: 0.95rem;
     }
   </style>
 </head>
 <body>
-  <div class="window">
-    <header>sandelz homepage</header>
-    <p>Welcome to my website.</p>
-    <hr>
-    <h2>Tietoa minusta</h2>
-    <p>Olen 14v ja teen tätä sivua harjoittelun vuoksi.</p>
-    <hr>
-    <h2>Linkit</h2>
-    <ul>
-      <li><a href="https://google.com">Google</a></li>
-      <li><a href="https://youtube.com">YouTube</a></li>
-      <li><a href="info.html">Lisätietoja</a></li>
-      <li><a href="dark.html">Tumma teema</a></li>
-    </ul>
-    <hr>
-    <footer>© 2026 sandelzzz</footer>
+  <div class="page-wrap">
+    <div class="window">
+      <header>sandelz homepage</header>
+      <div class="status-bar">
+        <div class="status-card">
+          <strong>Status:</strong>
+          <p>HATRED, WRATH, ANGER</p>
+        </div>
+        <div class="status-card">
+          <strong>Top Music:</strong>
+          <p>METAL MUSIC, and kmfdm.</p>
+        </div>
+      </div>
+      <p>Welcome to Sandelz's homepage.</p>
+      <hr>
+      <h2>About Me</h2>
+      <p>I am a high school student from Finland and the creator of this website.</p>
+      <p class="small">yes this is a shitty website i made with help of ai.</p>
+      <hr>
+      <h2>Links</h2>
+      <ul>
+        <li><a href="info.html">More Information</a></li>
+        <li><a href="dark.html">thirdpage
+        </a></li>
+      </ul>
+      <hr>
+      <a class="button-link" href="info.html">More info</a>
+      <footer>© 2026 sandelzzz</footer>
+    </div>
   </div>
 </body>
 </html>
